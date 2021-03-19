@@ -1,0 +1,134 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+.container {
+	position: relative;
+	margin-top: 0px;
+
+}
+.container img {
+	display: block;
+	width: 100%;
+}
+.container, nav{
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+	left: 0;
+	right: 0;
+	top: 0;
+    height: 60px;
+    background-color: #1c2833;
+    color: white;
+    border-radius: 100px;
+}
+.webname{
+    float: left;
+    margin: 15px 0px 15px 30px;
+    font-size: 30px;
+}
+nav ul{
+    float: right;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 600px;
+}
+
+nav li{
+    display: inline-block;
+    line-height: 56px;
+    margin:0 25px;
+}
+
+nav ul li a{
+    display: block;
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+
+}
+
+a:hover{
+    color: #3498db;
+    border-bottom: 2px solid #3498db;
+}
+#search{
+    position: relative;
+    margin-top: 10px;
+    padding: 5px 10px 5px 20px;
+    width: 200px;
+    height: 25px;
+    border: 2px solid #3498db;
+    font-size: 15px;
+    color: #3498db;
+    border-radius: 550px;
+    align-items: center;
+    float: right;
+    z-index: 0;
+}
+#submit{
+    position: relative;
+    left: -40px;
+    margin-top: 10px;
+    margin-right: -20px;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    border-radius: 50%;
+    float: right;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+    z-index: 1;
+
+}
+#btn{
+    display: none;
+}
+.check{
+    font-size: 30px;
+    color: white;
+    float: right; 
+    line-height: 60px;
+    margin-right: 20px;
+    margin-left: 10px;
+    cursor: pointer;
+    transform: rotate(-90deg);
+    display: none;
+
+}
+
+@media screen and (max-width:1100px){
+    .webname {
+		float: none;
+		width: auto;
+		justify-content: center;
+	}
+    nav ul{
+        position: fixed;
+        width: 40%;
+        height: 100vh;
+        top: 60px;
+        left: 100%;
+        text-align: center;
+        background-color: #2c3e50;
+        transition: all 1s;
+    }
+    nav ul li{
+        display: block;
+    }
+    nav ul li a{
+        font-size: 20px;
+        color: white;
+    }
+    .check{
+        display: block;
+    }
+#btn:checked ~ ul{
+    left: 60%;
+}
+
+}
+
